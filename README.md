@@ -1,23 +1,65 @@
 # Laravel API Docs Generator
 
-Laravel route, controller, FormRequest ve middleware'lerini otomatik parse ederek interaktif API dokümantasyonu oluşturan Composer paketi.
+[![Latest Version](https://img.shields.io/github/v/tag/emreyilmaz99/laravel-api-docs?label=version&sort=semver)](https://github.com/emreyilmaz99/laravel-api-docs/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PHP](https://img.shields.io/badge/PHP-%3E%3D8.1-8892BF.svg)](https://php.net)
+[![Laravel](https://img.shields.io/badge/Laravel-10%20|%2011%20|%2012%20|%2013-FF2D20.svg)](https://laravel.com)
+
+Laravel route, controller, FormRequest ve middleware'lerini otomatik parse ederek **interaktif API dokümantasyonu** oluşturan Composer paketi. Sıfır konfigürasyon ile çalışır — kurulumu yapın, tarayıcıda açın.
+
+<p align="center">
+  <img src="docs/screenshots/dark-endpoint.png" alt="Dark Theme - Endpoint Detail" width="100%">
+</p>
+
+---
 
 ## Özellikler
 
-- Route'lardan otomatik endpoint keşfi
-- FormRequest'lerden parametre/validation analizi
-- Middleware'den auth/permission tespiti (class path desteği dahil)
-- Response pattern analizi (ServiceResponse, response()->json)
-- Interaktif "Try It" (cURL benzeri live test)
-- OpenAPI 3.0, Postman Collection, Markdown export
-- Dark/Light tema
-- Mobil uyumlu sidebar
-- Gelişmiş arama (endpoint, parametre, açıklama)
-- Cache desteği (config ile TTL ayarı)
-- Çoklu dil desteği (TR/EN)
-- Config tabanlı response wrapper formatı
+| Özellik | Açıklama |
+|---------|----------|
+| **Otomatik Endpoint Keşfi** | Route'lardan tüm API endpoint'lerini otomatik tarar |
+| **FormRequest Analizi** | Validation kurallarından parametre tipi, zorunluluk, min/max, enum değerleri çıkarır |
+| **Middleware Tespiti** | Auth tipi (Sanctum, Passport, vb.) ve permission bilgisini otomatik algılar |
+| **Response Analizi** | Controller kaynak kodundan gerçek response mesajlarını ve status code'ları parse eder |
+| **Try It (Live Test)** | Endpoint'leri doğrudan tarayıcıdan test edin |
+| **Çoklu Export** | OpenAPI 3.0, Postman Collection v2.1, Markdown, JSON |
+| **Dark / Light Tema** | Tek tıkla tema değiştirme |
+| **Gelişmiş Arama** | Endpoint, parametre adı ve açıklamada arama (Ctrl+K) |
+| **Cache Desteği** | Config ile TTL ayarı, artisan ile cache temizleme |
+| **Çoklu Dil (i18n)** | Türkçe ve İngilizce, özelleştirilebilir çeviriler |
+| **Mobil Uyumlu** | Responsive sidebar + hamburger menü |
 
-## Kurulum
+---
+
+## Ekran Görüntüleri
+
+### Dark Tema — Endpoint Detay & Try It
+<p align="center">
+  <img src="docs/screenshots/dark-endpoint.png" alt="Dark Theme" width="100%">
+</p>
+
+### Dark Tema — Body Parametreleri & Validation Kuralları
+<p align="center">
+  <img src="docs/screenshots/dark-parameters.png" alt="Parameters Table" width="100%">
+</p>
+
+### Light Tema — Parametre Tablosu
+<p align="center">
+  <img src="docs/screenshots/light-parameters.png" alt="Light Theme Parameters" width="100%">
+</p>
+
+### Light Tema — Request Body & Response Örnekleri
+<p align="center">
+  <img src="docs/screenshots/light-theme.png" alt="Light Theme" width="100%">
+</p>
+
+---
+
+---
+
+## Hızlı Başlangıç
+
+### Kurulum
 
 ```bash
 composer require laravel-api-docs/generator
@@ -135,6 +177,10 @@ php artisan vendor:publish --tag=api-docs-lang
 - PHP >= 8.1
 - Laravel 10, 11, 12 veya 13
 
+## Katkıda Bulunma
+
+Pull request'ler memnuniyetle karşılanır. Büyük değişiklikler için lütfen önce bir issue açın.
+
 ## Lisans
 
-MIT
+MIT — Detaylar için [LICENSE](LICENSE) dosyasına bakın.
